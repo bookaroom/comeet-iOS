@@ -16,7 +16,8 @@ extension Date {
     }
     
     func stringForAPI() -> String {
-        let formatter = ISO8601DateFormatter()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         return formatter.string(from: self)
     }
     
